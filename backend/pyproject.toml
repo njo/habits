@@ -1,5 +1,5 @@
 [project]
-name = "backend"
+name = "habit-app"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -9,3 +9,7 @@ dependencies = [
     "httpx>=0.28.1",
     "uvicorn>=0.34.0",
 ]
+
+[tool.setuptools]
+packages = ["habit-app"]
+py-modules = ["__init__"] # dash, not underscore
