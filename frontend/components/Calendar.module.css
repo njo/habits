@@ -1,0 +1,63 @@
+/* components/Calendar.module.css */
+
+.calendarContainer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 months, each gets one column */
+  gap: 20px;
+  padding: 20px;
+}
+
+.monthColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.monthLabel {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.daysGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column for each day */
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.day {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  color: #000000;
+}
+
+.day.red {
+  background-color: #ff0000;
+}
+
+.day.green {
+  background-color: #00ff00; /* Green color for days in API */
+}
+
+.day.blue {
+  background-color: #0000ff;
+}
+
+.day.yellow {
+  background-color: #ffff00;
+}
+
+.day:hover {
+  transform: scale(1.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .day {
+    color: #181717; /* White text in dark mode */
+  }
+}
